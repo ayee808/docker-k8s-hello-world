@@ -13,4 +13,4 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 # Build: docker build -t supermongol/hello-world-k8s-ui .
-# Run local: docker run -p 80:80 hello-world-k8s-ui
+# Run local: docker run -p 80:80 supermongol/hello-world-k8s-ui

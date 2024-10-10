@@ -10,3 +10,5 @@ spec:
     targetPort: 8000
   selector:
     app: hello-world-k8s-api
+
+# CREATE SERVICE: kubectl apply -f service-api.yaml
