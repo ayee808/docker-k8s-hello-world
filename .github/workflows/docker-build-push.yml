@@ -21,9 +21,18 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push Docker image
+    - name: Build and push API Docker image
       uses: docker/build-push-action@v4
       with:
-        context: .
+        context: ./api
+        file: ./api/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest,${{ secrets.DOCKERHUB_USERNAME }}/my-app:${{ github.sha }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app-api:latest,${{ secrets.DOCKERHUB_USERNAME }}/my-app-api:${{ github.sha }}
+
+    - name: Build and push UI Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: ./ui/my-app
+        file: ./ui/my-app/Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app-ui:latest,${{ secrets.DOCKERHUB_USERNAME }}/my-app-ui:${{ github.sha }}
