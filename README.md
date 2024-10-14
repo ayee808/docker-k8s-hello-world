@@ -34,4 +34,4 @@ kubectl apply -f service-api.yaml
 ## Notes
 - The hello-world-k8s-api is deployed as a pod in the default namespace
 - The hello-world-k8s-ui is deployed as a pod in the default namespace
-- The hello-world-k8s-api and hello-world-k8s-ui are deployed in the same namespace
+
