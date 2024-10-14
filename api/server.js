@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.get('/message', (req, res) => {
   res.json({ message: "Hello from server!" });
+  console.log("API message sent");
 });
 
 app.listen(8000, () => {

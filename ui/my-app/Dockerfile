@@ -12,5 +12,9 @@ COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
-# Build: docker build -t supermongol/hello-world-k8s-ui .
-# Run local: docker run -p 80:80 supermongol/hello-world-k8s-ui
+# Build: 
+#   docker build -t supermongol/hello-world-k8s-ui .
+# Push: 
+#   docker push supermongol/hello-world-k8s-ui
+# Run local: 
+#   docker run -p 80:80 supermongol/hello-world-k8s-ui

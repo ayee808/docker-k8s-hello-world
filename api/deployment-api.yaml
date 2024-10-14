@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: hello-world-k8s-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: hello-world-k8s-api
@@ -16,6 +16,7 @@ spec:
       containers:
       - name: hello-world-k8s-api
         image: supermongol/hello-world-k8s-api
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
 
