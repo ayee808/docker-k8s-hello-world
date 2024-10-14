@@ -26,3 +26,10 @@ spec:
 #   kubectl set image deployment/hello-world-k8s-ui hello-world-k8s-ui=supermongol/hello-world-k8s-ui:latest
 # DELETE EXISTING PODS: 
 #   kubectl delete pods -l app=hello-world-k8s-ui
+# DELETE DEPLOYMENT: 
+#   kubectl delete deployment hello-world-k8s-ui
+# DELETE SERVICE: 
+#   kubectl delete service hello-world-k8s-ui
+# DELETE ALL: 
+#   kubectl delete deployment hello-world-k8s-ui && kubectl delete service hello-world-k8s-ui
+
