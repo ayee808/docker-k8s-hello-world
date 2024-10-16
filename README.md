@@ -32,6 +32,6 @@ kubectl apply -f service-api.yaml
 2. You should see the react logo and the hello world api response
 
 ## Notes
-- The hello-world-k8s-api is deployed as a pod in the default namespace
-- The hello-world-k8s-ui is deployed as a pod in the default namespace
+- The hello-world-k8s-api is deployed as a pod in the helloworld namespace
+- The hello-world-k8s-ui is deployed as a pod in the helloworld namespace
 
