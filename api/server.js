@@ -7,8 +7,14 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/message', (req, res) => {
-  res.json({ message: "Hello from server!" });
+  res.json({ message: "Welcome User" });
   console.log("API message sent");
+});
+
+// Endpoint to handle POST request
+app.post('/submit', (req, res) => {
+  const { name } = req.body;
+  res.json({ message: `Hello, ${name}!` });
 });
 
 app.listen(8000, () => {
