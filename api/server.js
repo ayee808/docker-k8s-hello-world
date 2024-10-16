@@ -15,6 +15,7 @@ app.get('/message', (req, res) => {
 app.post('/submit', (req, res) => {
   const { name } = req.body;
   res.json({ message: `Hello, ${name}!` });
+  console.log("API message sent");
 });
 
 app.listen(8000, () => {
