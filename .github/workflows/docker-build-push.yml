@@ -27,6 +27,7 @@ jobs:
         context: ./api
         file: ./api/Dockerfile
         push: true
+        platforms: linux/amd64
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-world-k8s-api:latest,${{ secrets.DOCKERHUB_USERNAME }}/hello-world-k8s-api:${{ github.sha }}
 
     - name: Build and push UI Docker image
@@ -35,4 +36,5 @@ jobs:
         context: ./ui/my-app
         file: ./ui/my-app/Dockerfile
         push: true
+        platforms: linux/amd64
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-world-k8s-ui:latest,${{ secrets.DOCKERHUB_USERNAME }}/hello-world-k8s-ui:${{ github.sha }}

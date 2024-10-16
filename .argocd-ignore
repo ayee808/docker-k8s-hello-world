@@ -1,17 +1,9 @@
-# Ignore package-lock.json
-package-lock.json
-
-# Ignore node_modules directory
-node_modules/
-
-# Ignore Docker-related files
-Dockerfile
-.dockerignore
-
-# Ignore Git-related files
-.git/
-.gitignore
-
-# Ignore environment files
-.env
-.env.local
+ignore:
+  - package-lock.json
+  - node_modules/
+  - Dockerfile
+  - .dockerignore
+  - .git/
+  - .gitignore
+  - .env
+  - .env.local
