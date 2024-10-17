@@ -14,7 +14,7 @@ app.get('/message', (req, res) => {
 // Endpoint to handle POST request
 app.post('/submit', (req, res) => {
   const { name } = req.body;
-  res.json({ message: `Hello, ${name}!` });
+  res.json({ message: `Hello, ${name}! nice to meet you!` });
   console.log("API message sent");
 });
 
