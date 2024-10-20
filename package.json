@@ -1,11 +1,14 @@
 {
-  "devDependencies": {
-    "@types/react": "^18.3.11"
+  "workspaces": [
+    "api",
+    "ui"
+  ],
+  "scripts": {
+    "start": "concurrently -n api,ui -c green,blue \"npm --workspace api run dev\" \"npm --workspace ui run dev\"",
+    "build": "npm --workspace ui run build",
+    "serve": "concurrently -n api,ui -c green,blue \"npm --workspace api start\" \"npm --workspace ui run serve\""
   },
-  "dependencies": {
-    "@chakra-ui/react": "^2.10.2",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "framer-motion": "^11.11.8"
+  "devDependencies": {
+    "concurrently": "^9.0.1"
   }
 }
