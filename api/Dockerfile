@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:14
+FROM node:18
 
 WORKDIR /usr/src/app
 
@@ -7,7 +7,7 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY server.js .
 
 EXPOSE 8000
 CMD [ "node", "server.js" ]
