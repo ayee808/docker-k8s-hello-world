@@ -14,6 +14,16 @@ This is a simple node.js backend api and react frontend hello world application.
 3. To run in production mode: `npm run build && npm run serve`
     * When run from the root of the repository this builds the UI static bundle and the concurrently runs the API and a static web server for the UI.
 
+## Build and scan with Portage
+
+To build and scan code add container images fore both the API and the UI, simply run:
+
+```bash
+npm run portage
+```
+
+Configuration for running portage against both the API and the UI projects can be found in the `.portage` folder.
+
 ## Running the application on kubernetes in docker desktop
 1. Start Docker Desktop and make sure kubernetes is enabled
 2. Start the hello-world-k8s-api

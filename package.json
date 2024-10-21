@@ -6,7 +6,8 @@
   "scripts": {
     "start": "concurrently -n api,ui -c green,blue \"npm --workspace api run dev\" \"npm --workspace ui run dev\"",
     "build": "npm --workspace ui run build",
-    "serve": "concurrently -n api,ui -c green,blue \"npm --workspace api start\" \"npm --workspace ui run serve\""
+    "serve": "concurrently -n api,ui -c green,blue \"npm --workspace api start\" \"npm --workspace ui run serve\"",
+    "portage": "concurrently -n api,ui -c green,blue \"portage run all --config .portage/api.yml\" \"portage run all --config .portage/ui.yml\""
   },
   "devDependencies": {
     "concurrently": "^9.0.1"

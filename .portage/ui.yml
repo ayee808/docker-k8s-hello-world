@@ -1,0 +1,10 @@
+imageTag: supermongol/hello-world-k8s-ui
+artifactDir: ui/artifacts
+codeScan:
+  gitleaksSrcDir: ./ui
+  semgrepSrcDir: ./ui
+imageBuild:
+  buildDir: ./ui
+  dockerfile: ./ui/Dockerfile
+imagePublish:
+  enabled: false
